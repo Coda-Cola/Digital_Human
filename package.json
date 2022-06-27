@@ -1,0 +1,23 @@
+{
+  "name": "digital_human",
+  "version": "0.0.1",
+  "description": "digital ids for folks",
+  "main": "src/index.html",
+  "dependencies": {
+    "tailwindcss": "^3.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coda-Cola/Digital_Human.git"
+  },
+  "author": "coda-cola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Coda-Cola/Digital_Human/issues"
+  },
+  "homepage": "https://github.com/Coda-Cola/Digital_Human#readme"
+}
