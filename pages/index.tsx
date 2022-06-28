@@ -75,8 +75,9 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="w-full md:w-3/5 py-6 text-center">
-              <div className="flex w-full md:w-4/5 z-50">
+            {/* right colomn - picture */}
+            <div className="flex items-center justify-center w-full md:w-3/5 py-6 text-center">
+              <div className="flex items-center justify-center w-full md:w-4/5 z-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   data-name="Layer 1"
