@@ -56,7 +56,7 @@ export default function Home() {
         </nav>
 
         {/* <!--Hero--> */}
-        {/* <div className="pt-24 bg-gray-800">
+        <div className="pt-24 bg-gray-800">
           <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -83,7 +83,6 @@ export default function Home() {
                   width="723"
                   height="474"
                   viewBox="0 0 723 474"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
                 >
                   <path
                     d="M597.11024,275h-43a9.5108,9.5108,0,0,1-9.5-9.5v-43a9.5108,9.5108,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,597.11024,275Zm-43-60a7.50836,7.50836,0,0,0-7.5,7.5v43a7.50836,7.50836,0,0,0,7.5,7.5h43a7.50836,7.50836,0,0,0,7.5-7.5v-43a7.50836,7.50836,0,0,0-7.5-7.5Z"
@@ -291,7 +290,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* About */}
         <section className="bg-white border-b py-8">
