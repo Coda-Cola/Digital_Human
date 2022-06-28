@@ -344,8 +344,8 @@ export default function Home() {
                     d="M119.9,721.42c-3-5.51.4-12.27,4.29-17.18s8.61-10,8.51-16.29c-.15-9-9.7-14.31-17.33-19.09a84,84,0,0,1-15.56-12.51A22.8,22.8,0,0,1,95,650c-1.58-3.52-1.54-7.52-1.44-11.37q.51-19.26,1.91-38.49"
                     fill="none"
                     stroke="#3f3d56"
-                    stroke-miterlimit="10"
-                    stroke-width="4"
+                    strokeMiterlimit="10"
+                    strokeWidth="4"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
@@ -422,49 +422,49 @@ export default function Home() {
                     d="M387.5,490A66.5,66.5,0,1,1,321,423.5,66.47,66.47,0,0,1,387.5,490Z"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
                     d="M325.38,467.23l8.3,13,35.53,55.59a66.5,66.5,0,0,1-103.32-8.57l43.54-84.94.91,1.43"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
                     d="M385.31,507a66.46,66.46,0,0,1-16.1,28.82l-35.53-55.59,15.69-24.78a.66.66,0,0,1,1.1,0C353.76,460.32,371,486,385.31,507Z"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
                     d="M337.5,452.5a15,15,0,0,1-12.12,14.73l-15-23.51a15,15,0,0,1,27.16,8.78Z"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
                     d="m347.5 481.5"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
                     d="m333.5 480.5"
                     fill="none"
                     stroke="#f2f2f2"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.5 -150.75)"
@@ -733,8 +733,8 @@ export default function Home() {
                     fill="none"
                     opacity=".8"
                     stroke="#ff6347"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <path
                     transform="translate(-11.697 -13.011)"
@@ -742,8 +742,8 @@ export default function Home() {
                     fill="none"
                     opacity=".8"
                     stroke="#ff6347"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                   />
                   <circle cx="214.07" cy="310.65" r="11.968" fill="#ff6347" />
                   <circle cx="322.2" cy="566.52" r="11.968" fill="#ff6347" />
