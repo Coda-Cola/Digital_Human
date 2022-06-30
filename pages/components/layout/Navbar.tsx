@@ -58,14 +58,14 @@ function Navbar({ isAuthenticated, signIn, signOut }: NavbarProps) {
                 className={styles.signInBtn}
                 onClick={() => signOut()}
               >
-                Sign out
+                Log out
               </button>
             ) : (
               <button
                 className={styles.signInBtn}
                 onClick={() => signIn()}
               >
-                Sign in
+                Log in
               </button>
             )}
           </div>
