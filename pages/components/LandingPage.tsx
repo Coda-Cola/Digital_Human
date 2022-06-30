@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 
 export default function LandingPage() {
@@ -54,6 +55,16 @@ export default function LandingPage() {
           </div>
         </nav>
 
+=======
+import { Authenticated } from '../types'
+
+interface LandingPageProps extends Authenticated {}
+
+export default function LandingPage({ isAuthenticated = false }: LandingPageProps) {
+  return (
+    <>
+      <div className="landing-page bg-stone-200">
+>>>>>>> auth
         {/* <!--Hero--> */}
         <div className="pt-24 bg-gray-800">
           <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
