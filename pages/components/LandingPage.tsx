@@ -1,4 +1,3 @@
-import Navbar from './layout/Navbar'
 import { Authenticated } from '../types'
 
 interface LandingPageProps extends Authenticated {}
@@ -7,10 +6,6 @@ export default function LandingPage({ isAuthenticated = false }: LandingPageProp
   return (
     <>
       <div className="landing-page bg-stone-200">
-        
-        <Navbar 
-          isAuthenticated={isAuthenticated}
-        />
         {/* <!--Hero--> */}
         <div className="pt-24 bg-gray-800">
           <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">

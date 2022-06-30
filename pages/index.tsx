@@ -1,4 +1,6 @@
+import Dashboard from './components/Dashboard';
 import LandingPage from './components/LandingPage'
+import Navbar from './components/layout/Navbar';
 
 export default function Index() {
   /**@todo add authentication logic */
@@ -7,7 +9,13 @@ export default function Index() {
   const isAuthenticated = false;
   return (
     <>
-      <LandingPage isAuthenticated={isAuthenticated}/>
+      <Navbar isAuthenticated={isAuthenticated} />
+      {
+        isAuthenticated ? 
+        <Dashboard /> : 
+        <LandingPage isAuthenticated={isAuthenticated}/>
+      }
+      
     </>
   );
 }
