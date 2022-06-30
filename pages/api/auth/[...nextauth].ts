@@ -16,10 +16,8 @@ const providers = [
       password: {  label: "Password", type: "password" }
     },
     async authorize(credentials, req) {
-      console.log('credentials', credentials)
-      console.log('req', req)
       // const { csrfToken, username, password } = credentials // same as req.body
-      
+
       // You need to provide your own logic here that takes the credentials
       // submitted and returns either a object representing a user or value
       // that is false/null if the credentials are invalid.
@@ -47,5 +45,5 @@ const providers = [
   })
 ]
 
-export default NextAuth({ providers })
+export default NextAuth({ providers, secret: "yLXz8bsprVJT6uDLQgS/M2lKbIzbpbUECOt2hZHDXH8=" })
 
