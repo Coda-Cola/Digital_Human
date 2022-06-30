@@ -20,3 +20,6 @@ export default function Index() {
   </>
 }
 
+export async function getServerSideProps() {
+  return { props: {} }
+}
