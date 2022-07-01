@@ -16,8 +16,6 @@ const providers = [
       password: { label: "Password", type: "password" },
     },
     async authorize(credentials, req) {
-      console.log('credentials', credentials)
-      console.log('req', req)
       // const { csrfToken, username, password } = credentials // same as req.body
       
       // You need to provide your own logic here that takes the credentials
@@ -47,5 +45,16 @@ const providers = [
   })
 ]
 
-export default NextAuth({ providers })
+/**
+ * @todo MOVE TO ENV VAR  WHEN IN PRODUCTION!
+ * 
+ * run in terminal
+ * $ openssl rand -base64 32
+ * to generate a secret
+ * 
+ * https://next-auth.js.org/configuration/options#secret
+ */
+const secret = "AL+RD+WZwDlLQn14EZz3OMdS/IeCnEwbslKcOdfaxDU="
+
+export default NextAuth({ providers, secret })
 
