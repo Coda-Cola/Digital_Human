@@ -1,25 +1,39 @@
-import Dashboard from './components/Dashboard';
-import LandingPage from './components/LandingPage'
-import Navbar from './components/layout/Navbar';
+import { useRouter } from "next/router";
+import Dashboard from "./Dashboard";
+import LandingPage from "./components/LandingPage";
+import Navbar from "./components/layout/Navbar";
 
-
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Index() {
-  const { data: session } = useSession()
+  const router = useRouter();
 
-  if(session) {
-    return <>
-      <Navbar isAuthenticated={true} signIn={signIn} signOut={signOut}/>
-      <Dashboard />
-    </>
+  // https://next-auth.js.org/getting-started/client#usesession
+  // status: "loading" | "authenticated" | "unauthenticated"
+  const { data: session, status } = useSession();
+
+  const navbar = (
+    <Navbar isAuthenticated={!!session} signIn={signIn} signOut={signOut} />
+  );
+
+  if (status === "loading") {
+    /* prevent undesired content flashing */
+    return <>{navbar}</>;
   }
-  return <>
-  <Navbar isAuthenticated={false} signIn={signIn} signOut={signOut}/>
-  <LandingPage isAuthenticated={false}/>
-  </>
-}
 
-export async function getServerSideProps() {
-  return { props: {} }
+  if (status === "authenticated") {
+    return (
+      <>
+        {navbar}
+        <Dashboard />
+      </>
+    );
+  }
+
+  return (
+    <>
+      {navbar}
+      {session ? <Dashboard /> : <LandingPage isAuthenticated={false} />}
+    </>
+  );
 }

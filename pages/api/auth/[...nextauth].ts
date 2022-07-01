@@ -13,7 +13,7 @@ const providers = [
     // You can pass any HTML attribute to the <input> tag through the object.
     credentials: {
       username: { label: "Username", type: "text", placeholder: "jsmith" },
-      password: {  label: "Password", type: "password" }
+      password: { label: "Password", type: "password" },
     },
     async authorize(credentials, req) {
       console.log('credentials', credentials)
