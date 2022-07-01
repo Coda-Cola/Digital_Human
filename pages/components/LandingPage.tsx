@@ -730,3 +730,8 @@ export default function LandingPage({ isAuthenticated = false }: LandingPageProp
     </>
   );
 }
+
+
+export async function getServerSideProps() {
+  return { props: {} }
+}
