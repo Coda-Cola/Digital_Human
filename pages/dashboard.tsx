@@ -7,7 +7,10 @@ function Dashboard() {
   const authContext = useContext(AuthContext)
 
   useEffect(() => {
-    authContext?.isAuthenticated() ? router.push("/dashboard") : router.push("/api/auth/login")
+    authContext?.isAuthenticated() ? 
+    router.push("/dashboard") : 
+    router.push("/")
+    // router.push("/api/auth/login")
   }, [])
   return (
     <div>Dashboard</div>
