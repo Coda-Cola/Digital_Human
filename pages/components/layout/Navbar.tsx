@@ -1,12 +1,8 @@
-import { useContext } from "react";
 import Image from "next/image";
 import { Authenticated } from "../../types";
 import { signIn, signOut } from "next-auth/react"
 
-interface NavbarProps extends Authenticated {
-  signIn?: (a?:any, b?:any) => void;
-  signOut?: (a?:any, b?:any) => void;
-}
+interface NavbarProps extends Authenticated {}
 
 const styles = {
   signInBtn: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-700 hover:bg-white mt-4 md:mt-0",
@@ -57,7 +53,6 @@ function Navbar({ isAuthenticated }: NavbarProps) {
             {isAuthenticated ? (
               <button
                 className={styles.signInBtn}
-                // onClick={() => signOut()}
                 onClick={() => signOut({ callbackUrl: '/' })}
               >
                 Log out
@@ -66,8 +61,8 @@ function Navbar({ isAuthenticated }: NavbarProps) {
               <button
                 className={styles.signInBtn}
                 onClick={() => signIn()}
+                /* if we want to redirect user to /dashboard after authorization completes */
                 // onClick={() => signIn(undefined, { callbackUrl: '/dashboard' })}
-                // onClick={() => signIn('credentials', { callbackUrl: '/dashboard' })}
               >
                 Log in
               </button>

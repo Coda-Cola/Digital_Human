@@ -1,3 +1,19 @@
+/**
+ * @deprecated quicker than it became useful =) 
+ * 
+ * I was trying to protect API routes by providing app with
+ * context that would tell each page if the request came 
+ * from an authorized user. I'd store JWE token in local or session
+ * storage.
+ * 
+ * Turned out that on successful authorization NextAuth sets 
+ * CSRF Token in cookies, so it's available on client/server 
+ * via getCsrfToken() hook.
+ * 
+ * @see https://next-auth.js.org/getting-started/client#getcsrftoken
+ * 
+ * @todo refactor this pattern to use as custom context providers later.
+ */
 import { useState, createContext } from "react";
 
 const AuthContext = createContext<AuthContextProps | null>(null);
@@ -29,7 +45,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     }
 
     console.log('setting token to localStorage', token)
-    localStorage.setItem("token", token)
+    // localStorage.setItem("token", token)
 
     /* set auth state */
     setAuthState({ token })
