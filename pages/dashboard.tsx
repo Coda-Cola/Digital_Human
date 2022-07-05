@@ -1,24 +1,22 @@
-import { useEffect, useContext } from 'react'
-import { useRouter } from 'next/router'
-import { AuthContext } from './context/auth-context'
-import Navbar from "./components/layout/Navbar";
-import { useSession, signIn, signOut } from "next-auth/react";
-
+/**
+ * Dashboard will provide the main UI functionality for the 
+ * authenticated user.
+ * 
+ * User can:
+ * 
+ * Add personal data attributes.
+ * Add personal ID documents and describe their attributes.
+ * Query and view data attributes.
+ * Query available Verification Requests.
+ * Issue Verification Requests for their attributes.
+ * Issue Verification Responses to Verification Requests.
+ * Grant and revoke Access Rights to their attributes.
+ * View access history - who accessed their attributes.
+ * 
+ */
 function Dashboard() {
-  const router = useRouter()
-  const authContext = useContext(AuthContext)
-  const { data: session } = useSession()
-  useEffect(() => {
-    // authContext?.isAuthenticated() ? 
-    // router.push("/dashboard") : 
-    // router.push("/")
-    // router.push("/api/auth/login")
-  }, [])
   return (
-    <>
-      <Navbar isAuthenticated={!!session}/>
-      <div>Dashboard</div>
-    </>
+      <div className='dashboard'>Dashboard</div>
   )
 }
 

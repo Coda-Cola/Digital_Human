@@ -37,7 +37,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const setUserAuthInfo = ({ token }: AuthStateProps): void => {
     /** persists token in localStorage 
      * @todo or sessionStorage
-     * https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
      * make it safer with sessionStorage? or just more annoying coz will ask to login every time user closes browser tab.
     */
     if (token === null) {

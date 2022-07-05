@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { Authenticated } from "../../types";
-import { signIn, signOut } from "next-auth/react"
+import { useSession, signIn, signOut } from "next-auth/react"
 
-interface NavbarProps extends Authenticated {}
 
 const styles = {
   signInBtn: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-700 hover:bg-white mt-4 md:mt-0",
   link: "block mt-4 sm:inline-block sm:mt-0 text-teal-300 hover:text-white mr-4"
 }
 
-function Navbar({ isAuthenticated }: NavbarProps) {
-
+function Navbar() {
+  const { status } = useSession();
+  const isAuthenticated = (status === 'authenticated')
+  
   const userLinks = [
     <a key={"dashboard-link"} href="/dashboard" className={styles.link}>
       Dashboard
