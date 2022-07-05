@@ -1,10 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import Image from "next/image";
 import { Authenticated } from "../../types";
+import { signIn, signOut } from "next-auth/react"
 
 interface NavbarProps extends Authenticated {
-  signIn: () => void;
-  signOut: () => void;
+  signIn?: (a?:any, b?:any) => void;
+  signOut?: (a?:any, b?:any) => void;
 }
 
 const styles = {
@@ -12,10 +13,10 @@ const styles = {
   link: "block mt-4 sm:inline-block sm:mt-0 text-teal-300 hover:text-white mr-4"
 }
 
-function Navbar({ isAuthenticated, signIn, signOut }: NavbarProps) {
+function Navbar({ isAuthenticated }: NavbarProps) {
 
   const userLinks = [
-    <a key={"dashboard-link"} href="#" className={styles.link}>
+    <a key={"dashboard-link"} href="/dashboard" className={styles.link}>
       Dashboard
     </a>,
   ];
@@ -56,7 +57,8 @@ function Navbar({ isAuthenticated, signIn, signOut }: NavbarProps) {
             {isAuthenticated ? (
               <button
                 className={styles.signInBtn}
-                onClick={() => signOut()}
+                // onClick={() => signOut()}
+                onClick={() => signOut({ callbackUrl: '/' })}
               >
                 Log out
               </button>
@@ -64,6 +66,8 @@ function Navbar({ isAuthenticated, signIn, signOut }: NavbarProps) {
               <button
                 className={styles.signInBtn}
                 onClick={() => signIn()}
+                // onClick={() => signIn(undefined, { callbackUrl: '/dashboard' })}
+                // onClick={() => signIn('credentials', { callbackUrl: '/dashboard' })}
               >
                 Log in
               </button>

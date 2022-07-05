@@ -2,7 +2,7 @@ import { Authenticated } from '../types'
 
 interface LandingPageProps extends Authenticated {}
 
-export default function LandingPage({ isAuthenticated = false }: LandingPageProps) {
+export default function LandingPage() {
   return (
     <>
       <div className="landing-page bg-stone-200">
