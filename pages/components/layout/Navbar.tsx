@@ -30,7 +30,7 @@ function Navbar() {
             alt="logo"
           />
           <Link href="/">
-            <a className={styles.link}>
+            <a>
               <span className="font-bold text-xl">Digital Human</span>
             </a>
           </Link>

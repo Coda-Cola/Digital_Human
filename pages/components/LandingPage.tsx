@@ -1,4 +1,4 @@
-import { Authenticated } from '../types'
+import { Authenticated } from '../lib/types'
 
 interface LandingPageProps extends Authenticated {}
 
