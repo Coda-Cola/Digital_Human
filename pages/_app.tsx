@@ -1,10 +1,20 @@
 import "../styles/globals.css";
 import Image from "next/image";
+import Navbar from "./components/layout/Navbar";
 import { SessionProvider, useSession } from "next-auth/react";
 import type { AppProps } from "next/app";
-import Navbar from "./components/layout/Navbar";
+import { NextPage } from "next";
+import { ReactElement, ReactNode } from "react";
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+export type Page<T> = NextPage<T> & {
+  auth?: { role: string; unauthorized: string } | undefined 
+};
+
+type CustomAppProps = AppProps & {
+  Component: Page<unknown>;
+};
+
+function MyApp({ Component, pageProps: { session, ...pageProps } }: CustomAppProps) {
   return (
     <SessionProvider session={session}>
       <Navbar />

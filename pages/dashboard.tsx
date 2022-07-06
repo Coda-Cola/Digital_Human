@@ -24,6 +24,5 @@ export default Dashboard
 
 Dashboard.auth = {
   role: 'client',
-  // loading: <Loading />,
   unauthorized: '/login',
 }
